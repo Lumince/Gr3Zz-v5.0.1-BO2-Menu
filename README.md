@@ -7,13 +7,12 @@ Find the function `onplayerspawned()` & look for `if(self isHost() || self.name 
 Enter your username where USERNAME is, then save and compile the gsc for Plutonium's use. Enjoy!
 
 ## Credit:
-- ZeiiKeN - The Menu
+- ZeiiKeN(blakryder1) - The Menu & Functions from se7ensins
 - ZECxR3ap3r#2112 - Custom Functions/Major Help
 - Ultimateman#9753 - Functions/Help
 - GerardS0406#5657 - Functions/Help
-- blakryder1 - Functions from se7ensins
 
-## Changes
+## Changes from v4.1
 **Fixed/Changed Functions:**
 - Third Person
 - Fixed Monkey Bombs, EMPs, Claymores and Time Bombs
@@ -46,7 +45,7 @@ Enter your username where USERNAME is, then save and compile the gsc for Plutoni
 - Give All Golden Helmets
 - Weapon Drop
 - Pack-a-Punch & Unpack-a-Punch Current Weapon
-- Open All Doors (removes all debris on Origins and Powers all Generators) (Quick revive says power is needed, but is purchasable/functional)
+- Open All Doors (removes all debris on Origins and Powers all Generators)
 
 **Removed Menus/Functions:**
 - Admin Menu

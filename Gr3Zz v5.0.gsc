@@ -111,7 +111,7 @@ onplayerspawned()
 		}
 	}
 }
-
+//8 Guns
 MuleForAll()
   {
   self endon("disconnect");
@@ -183,10 +183,22 @@ MenuStructure()
 	self MenuOption("Main Mods",5,"Clone Yourself",::CloneMe);
 	self MenuOption("Main Mods",6,"Invisible",::toggle_invs);
 	self MenuOption("Main Mods",7,"Give Money",::MaxScore);
-	self MenuOption("Main Mods",8,"Give All Buildables",::giveAllBuildables);
 	switch(GetDvar( "mapname" )){
 	case "zm_transit": // Tranzit
+	self MenuOption("Main Mods",8,"Give All Buildables",::giveAllBuildables);
 	self MenuOption("Main Mods",9,"No Lava Damage",::NoLavaDamage);
+        break;
+	case "zm_buried": // Buried
+	self MenuOption("Main Mods",8,"Give All Buildables",::giveAllBuildables);
+		break;
+	case "zm_tomb": // Origins
+	self MenuOption("Main Mods",8,"Give All Buildables",::giveAllBuildables);
+        break;
+	case "zm_prison": // MOTD
+	self MenuOption("Main Mods",8,"Give All Buildables",::giveAllBuildables);
+        break;
+	case "zm_highrise": // Die Rise
+	self MenuOption("Main Mods",8,"Give All Buildables",::giveAllBuildables);
         break;
 }
 	self MainMenu("Melee/Equipment Menu","Gr3Zz v5.0");
@@ -458,11 +470,10 @@ MenuStructure()
 	case "zm_transit": // Tranzit
 	self MenuOption("Bullets Menu",4,"War Machine",::doBullet,"m32_upgraded_zm");
 	self MenuOption("Bullets Menu",5,"Hamr",::doBullet,"hamr_upgraded_zm");
-	self MenuOption("Bullets Menu",6,"RPD",::doBullet,"rpd_upgraded_zm");
-	self MenuOption("Bullets Menu",7,"RPG",::doBullet,"usrpg_upgraded_zm");
-	self MenuOption("Bullets Menu",8,"M1911",::doBullet,"m1911_upgraded_zm");	
-	self MenuOption("Bullets Menu",9,"DSR",::doBullet,"dsr50_upgraded_zm");
-	self MenuOption("Bullets Menu",10,"Normal Bullets",::NormalBullets);
+	self MenuOption("Bullets Menu",6,"RPG",::doBullet,"usrpg_upgraded_zm");
+	self MenuOption("Bullets Menu",7,"M1911",::doBullet,"m1911_upgraded_zm");	
+	self MenuOption("Bullets Menu",8,"DSR",::doBullet,"dsr50_upgraded_zm");
+	self MenuOption("Bullets Menu",9,"Normal Bullets",::NormalBullets);
         break;
 	case "zm_buried": // Buried
 	self MenuOption("Bullets Menu",4,"War Machine",::doBullet,"m32_upgraded_zm");
@@ -470,52 +481,39 @@ MenuStructure()
 	self MenuOption("Bullets Menu",6,"LSAT",::doBullet,"lsat_upgraded_zm");
 	self MenuOption("Bullets Menu",7,"RPG",::doBullet,"usrpg_upgraded_zm");
 	self MenuOption("Bullets Menu",8,"M1911",::doBullet,"m1911_upgraded_zm");	
-	self MenuOption("Bullets Menu",9,"AN94",::doBullet,"an94_upgraded_zm");	
-	self MenuOption("Bullets Menu",10,"DSR",::doBullet,"dsr50_upgraded_zm");
-	self MenuOption("Bullets Menu",11,"Dragunov",::doBullet,"svu_upgraded_zm");
-	self MenuOption("Bullets Menu",12,"Paralyzer",::doBullet,"slowgun_upgraded_zm");
-	self MenuOption("Bullets Menu",12,"Normal Bullets",::NormalBullets);
+	self MenuOption("Bullets Menu",9,"DSR",::doBullet,"dsr50_upgraded_zm");
+	self MenuOption("Bullets Menu",10,"Normal Bullets",::NormalBullets);
         break;
 	case "zm_tomb": // Origins
 	self MenuOption("Bullets Menu",4,"War Machine",::doBullet,"m32_upgraded_zm");
 	self MenuOption("Bullets Menu",5,"Hamr",::doBullet,"hamr_upgraded_zm");
 	self MenuOption("Bullets Menu",6,"MG08",::doBullet,"mg08_upgraded_zm");
-	self MenuOption("Bullets Menu",7,"MP40",::doBullet,"mp40_upgraded_zm");
-	self MenuOption("Bullets Menu",8,"SCAR",::doBullet,"scar_upgraded_zm");
-	self MenuOption("Bullets Menu",9,"Thompson",::doBullet,"thompson_upgraded_zm");
-	self MenuOption("Bullets Menu",10,"DSR",::doBullet,"dsr50_upgraded_zm");
-	self MenuOption("Bullets Menu",11,"Ballista",::doBullet,"ballista_upgraded_zm");
-	self MenuOption("Bullets Menu",12,"Air Staff",::doBullet,"staff_air_zm");
-	self MenuOption("Bullets Menu",13,"Fire Staff",::doBullet,"staff_fire_zm");	
-	self MenuOption("Bullets Menu",14,"Ice Staff",::doBullet,"staff_water_zm");
-	self MenuOption("Bullets Menu",15,"Lightning Staff",::doBullet,"staff_lightning_zm");
-	self MenuOption("Bullets Menu",16,"Normal Bullets",::NormalBullets);
+	self MenuOption("Bullets Menu",7,"DSR",::doBullet,"dsr50_upgraded_zm");
+	self MenuOption("Bullets Menu",8,"Ballista",::doBullet,"ballista_upgraded_zm");
+	self MenuOption("Bullets Menu",9,"Air Staff",::doBullet,"staff_air_zm");
+	self MenuOption("Bullets Menu",10,"Fire Staff",::doBullet,"staff_fire_zm");	
+	self MenuOption("Bullets Menu",11,"Ice Staff",::doBullet,"staff_water_zm");
+	self MenuOption("Bullets Menu",12,"Lightning Staff",::doBullet,"staff_lightning_zm");
+	self MenuOption("Bullets Menu",13,"Normal Bullets",::NormalBullets);
         break;
 	case "zm_prison": // MOTD
 	self MenuOption("Bullets Menu",4,"Hamr",::doBullet,"hamr_upgraded_zm");
 	self MenuOption("Bullets Menu",5,"Minigun",::doBullet,"minigun_alcatraz_upgraded_zm");
 	self MenuOption("Bullets Menu",6,"LSAT",::doBullet,"lsat_upgraded_zm");	
 	self MenuOption("Bullets Menu",7,"M1911",::doBullet,"m1911_upgraded_zm");	
-	self MenuOption("Bullets Menu",8,"UZI",::doBullet,"uzi_upgraded_zm");	
-	self MenuOption("Bullets Menu",9,"DSR",::doBullet,"dsr50_upgraded_zm");
-	self MenuOption("Bullets Menu",10,"Blundergat",::doBullet,"blundergat_upgraded_zm");
-	self MenuOption("Bullets Menu",11,"Blundersplat",::doBullet,"blundersplat_upgraded_zm");
-	self MenuOption("Bullets Menu",12,"Blundersplat Explosive Dart",::doBullet,"blundersplat_explosive_dart_zm");
-	self MenuOption("Bullets Menu",13,"DSR",::doBullet,"dsr50_upgraded_zm");
-	self MenuOption("Bullets Menu",14,"M82",::doBullet,"barretm82_upgraded_zm");
-	self MenuOption("Bullets Menu",15,"Normal Bullets",::NormalBullets);
+	self MenuOption("Bullets Menu",8,"DSR",::doBullet,"dsr50_upgraded_zm");
+	self MenuOption("Bullets Menu",9,"Blundergat",::doBullet,"blundergat_upgraded_zm");
+	self MenuOption("Bullets Menu",10,"DSR",::doBullet,"dsr50_upgraded_zm");
+	self MenuOption("Bullets Menu",11,"Normal Bullets",::NormalBullets);
         break;
 	case "zm_highrise": // Die Rise
 	self MenuOption("Bullets Menu",4,"War Machine",::doBullet,"m32_upgraded_zm");
 	self MenuOption("Bullets Menu",5,"Hamr",::doBullet,"hamr_upgraded_zm");
-	self MenuOption("Bullets Menu",6,"RPD",::doBullet,"rpd_upgraded_zm");
-	self MenuOption("Bullets Menu",7,"RPG",::doBullet,"usrpg_upgraded_zm");
-	self MenuOption("Bullets Menu",8,"M1911",::doBullet,"m1911_upgraded_zm");
-	self MenuOption("Bullets Menu",9,"AN94",::doBullet,"an94_upgraded_zm");	
-	self MenuOption("Bullets Menu",10,"DSR",::doBullet,"dsr50_upgraded_zm");
-	self MenuOption("Bullets Menu",11,"Dragunov",::doBullet,"svu_upgraded_zm");
-	self MenuOption("Bullets Menu",12,"Sliquifier",::doBullet,"slipgun_upgraded_zm");
-	self MenuOption("Bullets Menu",13,"Normal Bullets",::NormalBullets);
+	self MenuOption("Bullets Menu",6,"RPG",::doBullet,"usrpg_upgraded_zm");
+	self MenuOption("Bullets Menu",7,"M1911",::doBullet,"m1911_upgraded_zm");
+	self MenuOption("Bullets Menu",8,"DSR",::doBullet,"dsr50_upgraded_zm");
+	self MenuOption("Bullets Menu",9,"Dragunov",::doBullet,"svu_upgraded_zm");
+	self MenuOption("Bullets Menu",10,"Normal Bullets",::NormalBullets);
         break;
 	case "zm_nuked": // NukeTown
 	self MenuOption("Bullets Menu",4,"War Machine",::doBullet,"m32_upgraded_zm");
@@ -2552,7 +2550,7 @@ _network_safe_play_fx( fx, v_origin )
 StargateSG1()
 {
   self endon("disconnect");
-   self iprintln("All Portals are ^2Open!");
+   self iPrintln("^7Gates ^2Activated");
    flag_set( "activate_zone_chamber" );
    flag_set( "player_active_in_chamber" );
    stargate_teleport_enable(1);
@@ -2569,7 +2567,6 @@ StargateSG1()
 StargateSG2()
 {
   self endon("disconnect");
-   self iPrintln("^7Stargates ^2Activated");
    flag_set( "activate_zone_chamber" );
    flag_set( "player_active_in_chamber" );
    stargate_teleport_disable(1);
@@ -3359,14 +3356,14 @@ round_one()
 round_10()
 {
 	self thread ZombieKill();
-	level.round_number=250;
+	level.round_number=10;
 	self iPrintln("Round Set To ^1"+level.round_number+"");
 	wait 2;
 }
 round_20()
 {
 	self thread ZombieKill();
-	level.round_number=250;
+	level.round_number=20;
 	self iPrintln("Round Set To ^1"+level.round_number+"");
 	wait 2;
 }
@@ -3416,39 +3413,70 @@ Bullet(A,B)
 }
 OpenAllTehDoors()
 {
-	self iprintln("All Doors are now ^2Open!");
 	setdvar("zombie_unlock_all",1);
+	level notify( "junk purchased" );
+	level notify( "open_sesame" );
+	self thread powermanager();
+	self iprintln("All Doors are ^2Opening!");
 	Triggers=StrTok("zombie_doors|zombie_door|zombie_airlock_buy|zombie_debris|electric_door|rock_debris_pile|flag_blocker|window_shutter|zombie_trap","|");
 	for(a=0;a<Triggers.size;a++)
 	{
 		Trigger=GetEntArray(Triggers[a],"targetname");
 		for(b=0;b<Trigger.size;b++)
 		{
-			Trigger[b] notify("trigger");
-        	Trigger[b] maps/mp/zombies/_zm_blockers::door_opened(0);
+			if(GetDvar("mapname") == "zm_transit") //Transit
+			{
+				Trigger[b] notify("trigger");
+			}
+			if(GetDvar("mapname") == "zm_highrise") //Die Rise
+			{
+				Trigger[b] notify("trigger");
+			}
+			if(GetDvar("mapname") == "zm_prison") // Mob of the Dead
+			{
+				Trigger[b] notify("trigger");
+			}
+            if(GetDvar("mapname") == "zm_buried") // Buried
+            {
+              if(Trigger[b] != "electric_door")
+			  {
+                Trigger[b] notify("trigger");
+				self buried_debris();
+              }
+            }
+			if(GetDvar("mapname") == "zm_tomb") // Origins
+			{
+				Trigger[b] notify("trigger");
+        		Trigger[b] maps/mp/zombies/_zm_blockers::door_opened(0);
+			}
 		}
 	}
-	setdvar("zombie_unlock_all",0);
-	self powermanager();
 }
-
 powermanager()
 {
-	if(GetDvar("mapname") == "zm_prison") // Mob of the Dead
+	if(GetDvar("mapname") == "zm_transit") //Transit
 	{
 		self powerp();
+	}
+	if(GetDvar("mapname") == "zm_highrise") //Die Rise
+	{
+		self powerp();
+	}
+	if(GetDvar("mapname") == "zm_prison") // Mob of the Dead
+	{
+		//self powerpm();
 		self dogs_fed();
 	}
+	if(GetDvar("mapname") == "zm_buried") // Buried
+    {
+		self powerb();
+    }
 	if(GetDvar("mapname") == "zm_tomb") // Origins
 	{
 		self powero();
 		self turn_on_power();
 		self origins_debris();
 		self StargateSG1();
-	}
-	else
-	{
-		self powerp();
 	}
 }
 powerp()
@@ -3466,7 +3494,54 @@ powerp()
 		self iPrintln("^7PAP Power ^2ON");
 		}
 }
-
+powerb()
+{
+	self endon("disconnect");
+		trig = getent( "use_elec_switch", "targetname" );
+		powerswitch = getent( "elec_switch", "targetname" );
+		powerswitch notsolid();
+		trig sethintstring( &"ZOMBIE_ELECTRIC_SWITCH" );
+		trig setvisibletoall();
+		trig notify( "trigger", self );
+		trig setinvisibletoall();
+		powerswitch rotateroll( -90, 0, 3 );
+		powerswitch playsound( "zmb_switch_flip" );
+		powerswitch playsound( "zmb_poweron" );
+		level setclientfield( "zombie_power_on", 1 );
+		level thread maps/mp/zombies/_zm_perks::perk_unpause_all_perks();
+		powerswitch waittill( "rotatedone" );
+		playfx( level._effect[ "switch_sparks"], powerswitch.origin + ( 0, 12, -60 ), anglestoforward( powerswitch.angles ) );
+		powerswitch playsound( "zmb_turn_on" );
+		level notify( "electric_door" );
+		clientnotify( "power_on" );
+		flag_set("power_on");
+		self iprintln("Power ^2On!");
+}
+powerpm()
+{
+	self endon("disconnect");
+    	maps/mp/zombies/_zm_game_module::turn_power_on_and_open_doors();
+    	wait 1;
+    	flag_set( "power_on" );
+		clientnotify( "power_on" );
+    	level setclientfield( "zombie_power_on", 1 );
+    	level notify( "sleight_on" );
+    	wait_network_frame();
+    	level notify( "doubletap_on" );
+    	wait_network_frame();
+    	level notify( "juggernog_on" );
+    	wait_network_frame();
+    	level notify( "electric_cherry_on" );
+    	wait_network_frame();
+    	level notify( "deadshot_on" );
+    	wait_network_frame();
+    	level notify( "Pack_A_Punch_on" );
+    	wait_network_frame();
+		self iprintln("Power ^2On!");
+		clientnotify( "power_on" );
+		level setclientfield( "zombie_power_on", 1 );
+}
+//Origins Power
 powero()
 {
 	self endon("disconnect");
@@ -3477,7 +3552,7 @@ powero()
 		level setclientfield( "zone_capture_hud_all_generators_captured", 1 );
 		level thread maps/mp/zombies/_zm_perks::perk_unpause_all_perks();
 }
-
+//Origins Generator Power
 turn_on_power()
 {
 a_generators = getstructarray( "s_generator", "targetname" );
@@ -3492,7 +3567,7 @@ a_generators = getstructarray( "s_generator", "targetname" );
 		_k2495 = getNextArrayKey( _a2495, _k2495 );
 	}
 }
-
+//Origins Generators
 debug_set_generator_active()
 {
 	self set_player_controlled_area();
@@ -3500,12 +3575,12 @@ debug_set_generator_active()
 	self generator_state_power_up();
 	level setclientfield( self.script_noteworthy, self.n_current_progress / 100 );
 }
-
+//Origins Generators
 generator_state_power_up()
 {
 	level setclientfield( "state_" + self.script_noteworthy, 2 );
 }
-
+//Origins Generators
 set_player_controlled_area()
 {
 	level.zone_capture.last_zone_captured = self;
@@ -3513,17 +3588,21 @@ set_player_controlled_area()
 	self set_player_controlled_zone();
 	self enable_perk_machines();
 	self enable_random_perk_machines();
+	self enable_mystery_boxes();
 	self play_pap_anim(1);
 }
-
+//Origins Perk Power
 enable_perk_machines()
 {
-    a_keys = getarraykeys( self.perk_machines );
-    i = 0;
-    level notify( a_keys[ i ] + "_on" );
-    i++;
+	a_keys = getarraykeys(self.perk_machines);
+	i = 0;
+	level notify( a_keys[ i ] + "_on" );
+	e_perk_trigger = self.perk_machines[ a_keys[ i ] ];
+	e_perk_trigger.is_locked = 0;
+	e_perk_trigger maps/mp/zombies/_zm_perks::reset_vending_hint_string();
+	i++;
 }
-
+//Origins WF Power
 enable_random_perk_machines()
 {
 	_a586 = self.perk_machines_random;
@@ -3533,7 +3612,36 @@ enable_random_perk_machines()
 	random_perk_machine sethintstring( &"ZM_TOMB_RPB", level._random_zombie_perk_cost );
 	_k586 = getNextArrayKey( _a586, _k586 );
 }
-
+//Origins MysteryBox Power
+enable_mystery_boxes()
+{
+	_a608 = self.mystery_boxes;
+	_k608 = getFirstArrayKey( _a608 );
+	mystery_box = _a608[ _k608 ];
+	mystery_box.is_locked = 0;
+	mystery_box.zbarrier set_magic_box_state( "player_controlled" );
+	mystery_box.zbarrier setclientfield( "magicbox_runes", 1 );
+	_k608 = getNextArrayKey( _a608, _k608 );
+}
+//Origins MysteryBox Power
+set_magic_box_state(state)
+{
+	i = 0;
+		self hidezbarrierpiece( i );
+		i++;
+	self notify("zbarrier_state_change");
+	switch( state )
+	{
+		case "player_controlled":
+			if ( self.state == "arriving" || self.state == "close" )
+			{
+				self showzbarrierpiece( 2 );
+				self setclientfield( "magicbox_amb_fx", 2 );
+				break;
+		    }
+    }
+}
+//Origins Generator Power
 get_captured_zone_count()
 {
 	n_player_controlled_zones = 0;
@@ -3550,7 +3658,7 @@ get_captured_zone_count()
 	}
 	return n_player_controlled_zones;
 }
-
+//Origins Generator Power
 set_player_controlled_zone()
 {
 	self ent_flag_set( "player_controlled" );
@@ -3564,7 +3672,7 @@ set_player_controlled_zone()
 	self ent_flag_set( "player_controlled" );
 	level notify( "zone_captured_by_player" );
 }
-
+//Origins Generator Power
 update_captured_zone_count()
 {
 	level.total_capture_zones = get_captured_zone_count();
@@ -3577,7 +3685,7 @@ update_captured_zone_count()
 		flag_clear( "all_zones_captured" );
 	}
 }
-
+//Origins PAP Animation
 play_pap_anim( b_assemble )
 {
 	level setclientfield( "packapunch_anim", get_captured_zone_count() );
@@ -3585,7 +3693,7 @@ play_pap_anim( b_assemble )
 	t_pap trigger_on();
 	flag_set( "power_on" );
 }
-
+//Origins Rock Remover
 origins_debris()
 {
 	spawnpoint = undefined;
@@ -3633,6 +3741,59 @@ origins_debris()
     debriz1[0].origin = (13229, -1294, -198.2);
     debriz1[1].origin = (14238, -996, -196.1);
 }
+//Buried Couch Remover
+buried_debris()
+{
+	couch1 = undefined;
+    couch1 = "pf728_auto2528";
+    couch11 = GetentArray(couch1, "targetname" );
+    couch11[0].origin = (-3047.08, -2131.32, 560.125); 
+    couch11[0].angles = (0, 125.785, 0);
+    couch11[1].origin = (-3047.08, -2131.32, 560.125); 
+    couch11[1].angles = (0, 125.785, 0);
+	couch2 = undefined;
+    couch2 = "pf728_auto2529";
+    couch22 = GetentArray(couch2, "targetname" );
+    couch22[0].origin = (-3047.08, -2131.32, 560.125); 
+    couch22[0].angles = (0, 125.785, 0);
+    couch22[1].origin = (-3047.08, -2131.32, 560.125); 
+    couch22[1].angles = (0, 125.785, 0);
+	couch3 = undefined;
+    couch3 = "pf728_auto2530";
+    couch33 = GetentArray(couch3, "targetname" );
+    couch33[0].origin = (-3047.08, -2131.32, 560.125); 
+    couch33[0].angles = (0, 125.785, 0);
+    couch33[1].origin = (-3047.08, -2131.32, 560.125); 
+    couch33[1].angles = (0, 125.785, 0);
+	couch4 = undefined;
+    couch4 = "pf728_auto2531";
+    couch44 = GetentArray( couch4, "targetname" );
+    couch44[0].origin = (-3047.08, -2131.32, 560.125); 
+    couch44[0].angles = (0, 125.785, 0);
+    couch44[1].origin = (-3047.08, -2131.32, 560.125); 
+    couch44[1].angles = (0, 125.785, 0);
+	couch5 = undefined;
+    couch5 = "pf728_auto2532";
+    couch55 = GetentArray( couch5, "targetname" );
+    couch55[0].origin = (-3047.08, -2131.32, 560.125); 
+    couch55[0].angles = (0, 125.785, 0);
+    couch55[1].origin = (-3047.08, -2131.32, 560.125); 
+    couch55[1].angles = (0, 125.785, 0);
+	couch6 = undefined;
+    couch6 = "pf728_auto2533";
+    couch66 = GetentArray( couch6, "targetname" );
+    couch66[0].origin = (-3047.08, -2131.32, 560.125); 
+    couch66[0].angles = (0, 125.785, 0);
+    couch66[1].origin = (-3047.08, -2131.32, 560.125); 
+    couch66[1].angles = (0, 125.785, 0);
+	couch7 = undefined;
+    couch7 = "pf728_auto2534";
+    couch77 = GetentArray( couch7, "targetname" );
+    couch77[0].origin = (-3047.08, -2131.32, 560.125); 
+    couch77[0].angles = (0, 125.785, 0);
+    couch77[1].origin = (-3047.08, -2131.32, 560.125); 
+    couch77[1].angles = (0, 125.785, 0);
+}
 //MOTD Dogs fed
 dogs_fed()
 {
@@ -3647,7 +3808,6 @@ dogs_fed()
   level notify( "soul_catchers_charged" );
   level thread maps/mp/zombies/_zm_audio::sndmusicstingerevent( "quest_generic" );
 }
-
 give_money()
 {
 	self maps/mp/zombies/_zm_score::add_to_player_score(100000);
@@ -3962,7 +4122,26 @@ giveAllBuildables()
 	}
 	level thread buildbuildables();
 	level thread buildcraftables();
-	self iPrintln("All Buildables are all built!");
+	if(GetDvar("mapname") == "zm_transit") //Transit
+		{
+			self iPrintln("All Equipment Built!");
+		}
+		if(GetDvar("mapname") == "zm_highrise") //Die Rise
+		{
+			self iPrintln("All Equipment Built!");
+		}
+		if(GetDvar("mapname") == "zm_prison") // Mob of the Dead
+		{
+			self iPrintln("Equpiment Picked Up!");
+		}
+		if(GetDvar("mapname") == "zm_buried") // Buried
+		{
+			self iPrintln("All Equipment Built!");
+    	}
+		if(GetDvar("mapname") == "zm_tomb") // Origins
+		{
+			self iPrintln("All Equipment Built!");
+		}
 }
 
 buildbuildables()
@@ -4067,22 +4246,35 @@ buildbuildable( buildable, craft )
 // MOTD/Origins style buildables
 buildcraftables()
 {
-	// need a wait or else some buildables dont build
-	wait 1;
+    // need a wait or else some buildables dont build
+    wait 1;
 
-	if(is_classic())
-	{
-		if(level.scr_zm_map_start_location == "prison")
-		{
-			buildcraftable( "alcatraz_shield_zm" );
-			buildcraftable( "packasplat" );
-			changecraftableoption( 0 );
-		}
+    if(is_classic())
+    {
+        if(level.scr_zm_map_start_location == "prison")
+        {
+            buildcraftable( "alcatraz_shield_zm" );
+            buildcraftable( "packasplat" );
+            //takecraftableparts( "plane_cloth" );
+            //takecraftableparts( "plane_engine" );
+            //takecraftableparts( "plane_fueltanks" );
+            //takecraftableparts( "plane_steering" );
+            //takecraftableparts( "plane_rigging" );
+            //takecraftableparts( "quest_key1" );
+            //buildcraftable( "refuelable_plane" );
+            //buildcraftable( "plane" );
+            changecraftableoption( 0 );
+        }
 		else if(level.scr_zm_map_start_location == "tomb")
 		{
 			buildcraftable( "tomb_shield_zm" );
 			buildcraftable( "equip_dieseldrone_zm" );
 			takecraftableparts( "gramophone" );
+			buildcraftable( "elemental_staff_air" );
+			buildcraftable( "elemental_staff_water" );
+			buildcraftable( "elemental_staff_lightning" );
+			buildcraftable( "elemental_staff_fire" );// For now. this will give all staff parts, but the player who uses it will have the fire gem
+
 		}
 	}
 }
