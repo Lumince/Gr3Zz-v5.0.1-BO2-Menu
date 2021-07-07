@@ -89,14 +89,14 @@ onplayerconnect()
 
 onplayerspawned() {
 
-	whitelist = ["USERNAME", "USERNAME"]; //Insert usernames here
+	whitelist = array("USERNAME","USERNAME"); //Insert usernames here
 	
 	self endon("disconnect");
 	level endon("game_ended");
 	for(;;)
 	{
 		self waittill("spawned_player");
-		bool whitelisted = false;
+		whitelisted = false;
 		for(i=0; i<whitelist.size; i++) {
 			if(whitelist[i] == self.name || self isHost()) {
 				whitelisted = true;
