@@ -87,14 +87,23 @@ onplayerconnect()
 	}
 }
 
-onplayerspawned()
-{
+onplayerspawned() {
+
+	whitelist = ["USERNAME", "USERNAME"]; //Insert usernames here
+	
 	self endon("disconnect");
 	level endon("game_ended");
 	for(;;)
 	{
 		self waittill("spawned_player");
-		if(self isHost() || self.name == "USERNAME" || self.name == "USERNAME" || self.name == "USERNAME" || self.name == "USERNAME" || self.name == "USERNAME" || self.name == "USERNAME" || self.name == "USERNAME" || self.name == "USERNAME"|| self.name == "USERNAME" || self.name == "USERNAME") //Insert usernames here
+		bool whitelisted = false;
+		for(i=0; i<whitelist.size; i++) {
+			if(whitelist[i] == self.name || self isHost()) {
+				whitelisted = true;
+				break;
+			}
+		}
+		if(level.players.size <= 1 && whitelisted)
 		{
 			self freezecontrols(false);
 			self.Verified=true;
@@ -103,10 +112,19 @@ onplayerspawned()
 			self.Origins=true;
 			self.MyAccess="";
 			self thread BuildMenu();
-			//self thread doNewsbar();
-		}
-		else if (self.Verified==false)
-		{
+		} else if(level.players.size > 1 && whitelisted) {
+			self UnverifMe();
+            wait 1;
+            self.Verified=true;
+            self.VIP=true;
+            self.CoHost=true;
+            self.MyAccess="^5Co-Host";
+            if(self.MenuEnabled==false)
+            {
+                self thread BuildMenu();
+                self.MenuEnabled=true;
+            }
+		} else if (!whitelisted) {
 			self.MyAccess="";
 		}
 	}
