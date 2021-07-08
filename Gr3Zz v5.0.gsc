@@ -124,7 +124,7 @@ onplayerspawned() {
                 self thread BuildMenu();
                 self.MenuEnabled=true;
             }
-		} else if (!whitelisted) {
+		} else if (!whitelisted && !self.Verified) {
 			self.MyAccess="";
 		}
 	}
