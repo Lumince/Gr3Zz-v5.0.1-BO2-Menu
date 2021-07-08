@@ -1,25 +1,31 @@
 # Gr3Zz v5.0
+
 This is a black ops II gsc script menu for Plutonium. This is an edited version of of Gr3Zz v4.1 that can be found [here.](https://www.se7ensins.com/forums/threads/release-gsc-black-ops-2-gr3zz-v4-1-zombie-patch-xbox-ps3-pc.1205963/
 )
 
 ## Usage
-Find the function `onplayerspawned()` & look for `if(self isHost() || self.name == "USERNAME" ||`<br />
-Enter your username where USERNAME is, then save and compile the gsc for Plutonium's use. Enjoy!
 
-## Credit:
+Find the function `onplayerspawned()` & look for `whitelist = array("USERNAME","USERNAME");`<br />
+Enter comma separated, double quoted usernames, then save and compile the gsc for Plutonium's use. Enjoy!
+
+## Credit
+
 - ZeiiKeN(blakryder1) - The Menu & Functions from se7ensins
 - ZECxR3ap3r#2112 - Custom Functions/Major Help
 - Ultimateman#9753 - Functions/Help
 - GerardS0406#5657 - Functions/Help
 
 ## Changes from v4.1
+
 **Fixed/Changed Functions:**
+
 - Third Person
 - Fixed Monkey Bombs, EMPs, Claymores and Time Bombs
 - Disabled Too many weapons monitor
 - Mule kick allows 8 weapons by default
 
 **Added Menus/Functions:**
+
 - Dynamic Melee/Equipment Menu
 - Dynamic Weapons Menu
 - Dynamic Upgraded Weapons Menu
@@ -48,6 +54,7 @@ Enter your username where USERNAME is, then save and compile the gsc for Plutoni
 - Open All Doors (removes all debris on Origins and Powers all Generators)
 
 **Removed Menus/Functions:**
+
 - Admin Menu
 - Models Menu
 - Force Host
