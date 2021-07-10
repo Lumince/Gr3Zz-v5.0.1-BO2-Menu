@@ -110,7 +110,7 @@ onplayerspawned() {
 			self.VIP=true;
 			self.CoHost=true;
 			self.Origins=true;
-			self.MyAccess="";
+			self.MyAccess="^1Host";
 			self thread BuildMenu();
 		} else if(level.players.size > 1 && whitelisted) {
 			self UnverifMe();
@@ -118,6 +118,7 @@ onplayerspawned() {
             self.Verified=true;
             self.VIP=true;
             self.CoHost=true;
+			self.Origins=true;
             self.MyAccess="^5Co-Host";
             if(self.MenuEnabled==false)
             {
