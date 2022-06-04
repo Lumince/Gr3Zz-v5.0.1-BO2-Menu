@@ -87,7 +87,8 @@ onplayerconnect()
 	}
 }
 
-onplayerspawned() {
+onplayerspawned()
+{
 
 	whitelist = array("USERNAME","USERNAME"); //Insert usernames here
 	
@@ -130,6 +131,7 @@ onplayerspawned() {
 		}
 	}
 }
+
 //8 Guns
 MuleForAll()
   {
@@ -164,63 +166,64 @@ MenuStructure()
 {
 	if (self.Verified==true)
 	{
-		self MainMenu("Gr3Zz v5.0",undefined);
-		self MenuOption("Gr3Zz v5.0",0,"Main Mods",::SubMenu,"Main Mods");
-		self MenuOption("Gr3Zz v5.0",1,"Melee/Equipment Menu",::SubMenu,"Melee/Equipment Menu");
-		self MenuOption("Gr3Zz v5.0",2,"Weapons Menu",::SubMenu,"Weapons Menu");
-		self MenuOption("Gr3Zz v5.0",3,"Upgraded Weapons Menu",::SubMenu,"Upgraded Weapons Menu");
-		self MenuOption("Gr3Zz v5.0",4,"Bullets Menu",::SubMenu,"Bullets Menu");
+		self MainMenu("Gr3Zz v5.0.1",undefined);
+		self MenuOption("Gr3Zz v5.0.1",0,"Main Mods",::SubMenu,"Main Mods");
+		self MenuOption("Gr3Zz v5.0.1",1,"Melee/Equipment Menu",::SubMenu,"Melee/Equipment Menu");
+		self MenuOption("Gr3Zz v5.0.1",2,"Weapons Menu",::SubMenu,"Weapons Menu");
+		self MenuOption("Gr3Zz v5.0.1",3,"Upgraded Weapons Menu",::SubMenu,"Upgraded Weapons Menu");
+		self MenuOption("Gr3Zz v5.0.1",4,"Bullets Menu",::SubMenu,"Bullets Menu");
 	}
 	if (self.VIP==true)
 	{
-		self MenuOption("Gr3Zz v5.0",5,"Perks Menu",::SubMenu,"Perks Menu");
-		self MenuOption("Gr3Zz v5.0",6,"Fun Menu",::SubMenu,"Fun Menu");
-		self MenuOption("Gr3Zz v5.0",7,"Theme Menu",::SubMenu,"Theme Menu");
-		self MenuOption("Gr3Zz v5.0",8,"Teleport Menu",::SubMenu,"Teleport Menu");
-		self MenuOption("Gr3Zz v5.0",9,"Power Ups",::SubMenu,"Power Ups");
+		self MenuOption("Gr3Zz v5.0.1",5,"Perks Menu",::SubMenu,"Perks Menu");
+		self MenuOption("Gr3Zz v5.0.1",6,"Fun Menu",::SubMenu,"Fun Menu");
+		self MenuOption("Gr3Zz v5.0.1",7,"Theme Menu",::SubMenu,"Theme Menu");
+		self MenuOption("Gr3Zz v5.0.1",8,"Teleport Menu",::SubMenu,"Teleport Menu");
+		self MenuOption("Gr3Zz v5.0.1",9,"Power Ups",::SubMenu,"Power Ups");
 	}
 	if (self.CoHostself.CoHost==true)
 	{
-		self MenuOption("Gr3Zz v5.0",10,"Game Settings",::SubMenu,"Game Settings");
-		self MenuOption("Gr3Zz v5.0",11,"Clients Menu",::SubMenu,"Clients Menu");
-		self MenuOption("Gr3Zz v5.0",12,"All Clients",::SubMenu,"All Clients");
+		self MenuOption("Gr3Zz v5.0.1",10,"Game Settings",::SubMenu,"Game Settings");
+		self MenuOption("Gr3Zz v5.0.1",11,"Clients Menu",::SubMenu,"Clients Menu");
+		self MenuOption("Gr3Zz v5.0.1",12,"All Clients",::SubMenu,"All Clients");
 	}
 	if (self.Origins==true)
 	{
 	switch(GetDvar( "mapname" )){
 	case "zm_tomb": // Origins
-		self MenuOption("Gr3Zz v5.0",13,"Staffs Menu",::SubMenu,"Staffs Menu");
+		self MenuOption("Gr3Zz v5.0.1",13,"Staffs Menu",::SubMenu,"Staffs Menu");
         break;
 		}
 	}
-	self MainMenu("Main Mods","Gr3Zz v5.0");
+	self MainMenu("Main Mods","Gr3Zz v5.0.1");
 	self MenuOption("Main Mods",0,"GodMod",::Toggle_God);
 	self MenuOption("Main Mods",1,"Unlimited Ammo",::Toggle_Ammo);
 	self MenuOption("Main Mods",2,"x2 Speed",::doMiniSpeed);
 	self MenuOption("Main Mods",3,"Double Jump",::DoubleJump);
-	self MenuOption("Main Mods",4,"Third Person",::toggle_3ard);
-	self MenuOption("Main Mods",5,"Clone Yourself",::CloneMe);
-	self MenuOption("Main Mods",6,"Invisible",::toggle_invs);
-	self MenuOption("Main Mods",7,"Give Money",::MaxScore);
+	self MenuOption("Main Mods",4,"Visions",::togglevisions);
+	self MenuOption("Main Mods",5,"Third Person",::toggle_3ard);
+	self MenuOption("Main Mods",6,"Clone Yourself",::CloneMe);
+	self MenuOption("Main Mods",7,"Invisible",::toggle_invs);
+	self MenuOption("Main Mods",8,"Give Money",::MaxScore);
 	switch(GetDvar( "mapname" )){
 	case "zm_transit": // Tranzit
-	self MenuOption("Main Mods",8,"Give All Buildables",::giveAllBuildables);
-	self MenuOption("Main Mods",9,"No Lava Damage",::NoLavaDamage);
+	self MenuOption("Main Mods",9,"Give All Buildables",::giveAllBuildables);
+	self MenuOption("Main Mods",10,"No Lava Damage",::NoLavaDamage);
         break;
 	case "zm_buried": // Buried
-	self MenuOption("Main Mods",8,"Give All Buildables",::giveAllBuildables);
+	self MenuOption("Main Mods",9,"Give All Buildables",::giveAllBuildables);
 		break;
 	case "zm_tomb": // Origins
-	self MenuOption("Main Mods",8,"Give All Buildables",::giveAllBuildables);
+	self MenuOption("Main Mods",9,"Give All Buildables",::giveAllBuildables);
         break;
 	case "zm_prison": // MOTD
-	self MenuOption("Main Mods",8,"Give All Buildables",::giveAllBuildables);
+	self MenuOption("Main Mods",9,"Give All Buildables",::giveAllBuildables);
         break;
 	case "zm_highrise": // Die Rise
-	self MenuOption("Main Mods",8,"Give All Buildables",::giveAllBuildables);
+	self MenuOption("Main Mods",9,"Give All Buildables",::giveAllBuildables);
         break;
 }
-	self MainMenu("Melee/Equipment Menu","Gr3Zz v5.0");
+	self MainMenu("Melee/Equipment Menu","Gr3Zz v5.0.1");
 	self MenuOption("Melee/Equipment Menu",0,"Frag Grenade",::dolethal,"frag_grenade_zm");
 	self MenuOption("Melee/Equipment Menu",1,"Claymore",::doclaymore);
 	switch(GetDvar( "mapname" )){
@@ -293,7 +296,7 @@ MenuStructure()
 	self MenuOption("Melee/Equipment Menu",9,"Upgraded Ballistic Bowie",::doWeapon2,"knife_ballistic_bowie_upgraded_zm");
         break;
 }
-	self MainMenu("Weapons Menu","Gr3Zz v5.0");
+	self MainMenu("Weapons Menu","Gr3Zz v5.0.1");
 	self MenuOption("Weapons Menu",0,"Ray Gun",::doWeapon2,"ray_gun_zm");
 	self MenuOption("Weapons Menu",1,"RayGun Mark2",::doWeapon2,"raygun_mark2_zm");
 	self MenuOption("Weapons Menu",2,"M14",::doWeapon2,"m14_zm");
@@ -380,7 +383,7 @@ MenuStructure()
 	self MenuOption("Weapons Menu",16,"LSAT",::doWeapon2,"lsat_zm");
         break;
 }
-	self MainMenu("Upgraded Weapons Menu","Gr3Zz v5.0");
+	self MainMenu("Upgraded Weapons Menu","Gr3Zz v5.0.1");
 	self MenuOption("Upgraded Weapons Menu",0,"Ray Gun",::doWeapon2,"ray_gun_upgraded_zm");
 	self MenuOption("Upgraded Weapons Menu",1,"RayGun Mark2",::doWeapon2,"raygun_mark2_upgraded_zm");
 	self MenuOption("Upgraded Weapons Menu",2,"M14",::doWeapon2,"m14_upgraded_zm");
@@ -468,7 +471,7 @@ MenuStructure()
 }
 	switch(GetDvar( "mapname" )){
 	case "zm_tomb": // Origins
-	self MainMenu("Staffs Menu","Gr3Zz v5.0");
+	self MainMenu("Staffs Menu","Gr3Zz v5.0.1");
 	self MenuOption("Staffs Menu",0,"Air Staff",::doWeapon2,"staff_air_zm");
     self MenuOption("Staffs Menu",1,"Fire Staff",::doWeapon2,"staff_fire_zm");
 	self MenuOption("Staffs Menu",2,"Ice Staff",::doWeapon2,"staff_water_zm");		
@@ -480,7 +483,7 @@ MenuStructure()
 	self MenuOption("Staffs Menu",8,"Upgraded Lightning Staff",::doWeapon3,"staff_water_upgraded_zm");
 		break;
 }
-	self MainMenu("Bullets Menu","Gr3Zz v5.0");
+	self MainMenu("Bullets Menu","Gr3Zz v5.0.1");
 	self MenuOption("Bullets Menu",0,"Bullets Ricochet",::Tgl_Ricochet);
 	self MenuOption("Bullets Menu",1,"Teleporter Weapons",::TeleportGun);
 	self MenuOption("Bullets Menu",2,"FlameThrower",::FTH);
@@ -540,12 +543,12 @@ MenuStructure()
 	self MenuOption("Bullets Menu",6,"LSAT",::doBullet,"lsat_upgraded_zm");
 	self MenuOption("Bullets Menu",7,"RPG",::doBullet,"usrpg_upgraded_zm");
 	self MenuOption("Bullets Menu",8,"M1911",::doBullet,"m1911_upgraded_zm");
-	self MenuOption("Bullets Menu",9,"DSR",::doBullet,"dsr50_upgraded_zm");	
+	self MenuOption("Bullets Menu",9,"DSR",::doBullet,"dsr50_upgraded_zm");
 	self MenuOption("Bullets Menu",10,"Normal Bullets",::NormalBullets);
         break;
 }
-	self MainMenu("Perks Menu","Gr3Zz v5.0");
-	self MenuOption("Perks Menu",0,"Juggernaut",::doPerks,"specialty_armorvest");
+	self MainMenu("Perks Menu","Gr3Zz v5.0.1");
+	self MenuOption("Perks Menu",0,"Juggernog",::doPerks,"specialty_armorvest");
 	self MenuOption("Perks Menu",1,"Quick Revive",::doPerks,"specialty_quickrevive");
 	self MenuOption("Perks Menu",2,"SpeedCola",::doPerks,"specialty_fastreload");
 	self MenuOption("Perks Menu",3,"Double Tap",::doPerks,"specialty_rof");
@@ -588,13 +591,13 @@ MenuStructure()
 	self MenuOption("Perks Menu",7,"Remove All Perks",::removeallperks);
         break;
 }
-	self MainMenu("Fun Menu","Gr3Zz v5.0");
+	self MainMenu("Fun Menu","Gr3Zz v5.0.1");
 	self MenuOption("Fun Menu",0,"UFO Mode",::UFOMode);
 	self MenuOption("Fun Menu",1,"Forge Mode",::Forge);
 	self MenuOption("Fun Menu",2,"Aimbot",::doAimbot);
 	self MenuOption("Fun Menu",3,"Save and Load",::SaveandLoad);
-	self MenuOption("Fun Menu",4,"Skull Protector",::doProtecion);
-	self MenuOption("Fun Menu",5,"Drunk Mode",::aarr649);
+	self MenuOption("Fun Menu",4,"Death Skull",::doProtecion);
+	self MenuOption("Fun Menu",5,"PHP Flopper",::togglephd);
 	self MenuOption("Fun Menu",6,"Zombies Ignore Me",::NoTarget);
 	self MenuOption("Fun Menu",7,"JetPack",::doJetPack);
 	self MenuOption("Fun Menu",8,"Rapid Fire",::RapidFire);
@@ -627,7 +630,7 @@ MenuStructure()
 	self MenuOption("Fun Menu",15,"Song: NukeTown 3",::NukedSong3);
         break;
 }
-	self MainMenu("Theme Menu","Gr3Zz v5.0");
+	self MainMenu("Theme Menu","Gr3Zz v5.0.1");
 	self MenuOption("Theme Menu",0,"Default Theme",::doDefaultTheme);
 	self MenuOption("Theme Menu",1,"Blue Theme",::doBlue);
 	self MenuOption("Theme Menu",2,"Green Theme",::doGreen);
@@ -635,7 +638,7 @@ MenuStructure()
 	self MenuOption("Theme Menu",4,"Pink Theme",::doPink);
 	self MenuOption("Theme Menu",5,"Cyan Theme",::doCyan);
 	self MenuOption("Theme Menu",6,"Center Menu",::doMenuCenter);
-	self MainMenu("Teleport Menu","Gr3Zz v5.0");
+	self MainMenu("Teleport Menu","Gr3Zz v5.0.1");
 	switch(GetDvar( "mapname" )){
 	case "zm_transit": // Tranzit
 	self MenuOption("Teleport Menu",0,"Bus",::teleportToBus);
@@ -712,7 +715,7 @@ MenuStructure()
 	self MenuOption("Teleport Menu",8,"Yellow Garage",::teleporttoYellowGarage);
         break;
 }
-	self MainMenu("Power Ups","Gr3Zz v5.0");	
+	self MainMenu("Power Ups","Gr3Zz v5.0.1");	
 	self MenuOption("Power Ups",0,"Nuke Bomb",::doPNuke);
 	self MenuOption("Power Ups",1,"Max Ammo",::doPMAmmo);
 	self MenuOption("Power Ups",2,"Double Points",::doPDoublePoints);
@@ -746,7 +749,7 @@ MenuStructure()
 	self MenuOption("Power Ups",4,"Fire Sale",::GivePowerUp,"fire_sale");
         break;
 }
-	self MainMenu("Game Settings","Gr3Zz v5.0");
+	self MainMenu("Game Settings","Gr3Zz v5.0.1");
 	self MenuOption("Game Settings",0,"Open All Doors",::OpenAllTehDoors);
 	self MenuOption("Game Settings",1,"MysteryBox Everywhere",::AllBoxLocations);
 	self MenuOption("Game Settings",2,"MysteryBox Never Moves",::BoxStays);
@@ -764,7 +767,7 @@ MenuStructure()
 	self MenuOption("Game Settings",14,"Slow Zombies",::doSlowZombies);
 	self MenuOption("Game Settings",15,"Restart Match",::dorestartgame);
 	self MenuOption("Game Settings",16,"End Match",::doendgame);
-	self MainMenu("Clients Menu","Gr3Zz v5.0");
+	self MainMenu("Clients Menu","Gr3Zz v5.0.1");
 	for(p=0;p<level.players.size;p++)
 	{
 		player=level.players[p];
@@ -784,7 +787,7 @@ MenuStructure()
 	self MenuOption("Clients Functions",9,"Give GodMod",::PlayerGiveGodMod);
 	self MenuOption("Clients Functions",10,"Revive",::doRevivePlayer);
 	self MenuOption("Clients Functions",11,"Kick",::kickPlayer);
-	self MainMenu("All Clients","Gr3Zz v5.0");
+	self MainMenu("All Clients","Gr3Zz v5.0.1");
 	self MenuOption("All Clients",0,"All GodMod",::AllPlayerGiveGodMod);
 	self MenuOption("All Clients",1,"Teleport All To Me",::doTeleportAllToMe);
 	self MenuOption("All Clients",2,"Freeze All Position",::doFreeAllPosition);
@@ -859,7 +862,7 @@ BuildMenu()
 		if(self SecondaryOffhandButtonPressed() && self.MenuOpen==false)
 		{
 			self OuvertureMenu();
-			self LoadMenu("Gr3Zz v5.0");
+			self LoadMenu("Gr3Zz v5.0.1");
 		}
 		else if (self MeleeButtonPressed() && self.MenuOpen==true)
 		{
@@ -1063,7 +1066,7 @@ FermetureMenu()
 //	self thread NewsBarDestroy2(self.Menu.NewsBar["Background"]);
 //	self.Menu.NewsBar["Texte"]=self createFontString("default",1.5);
 //	self.Menu.NewsBar["Texte"].foreGround=true;
-//	self.Menu.NewsBar["Texte"] setText("^1W^7elcome ^1T^7o ^1G^7r3Zz ^1v^75.0 ^7- ^1P^7ress [{+smoke}] ^1t^7o ^1o^7pen menu-^1Y^7our ^1A^7ccess "+self.MyAccess+" ^7- ^1M^7ade ^1B^7y ^1Z^7eiiKeN ^7- ^1E^7dited ^1B^7y ^1B^7iff627");
+//	self.Menu.NewsBar["Texte"] setText("^1W^7elcome ^1T^7o ^1G^7r3Zz ^1v^75.0.1 ^7- ^1P^7ress [{+smoke}] ^1t^7o ^1o^7pen menu-^1Y^7our ^1A^7ccess "+self.MyAccess+" ^7- ^1M^7ade ^1B^7y ^1Z^7eiiKeN ^7- ^1E^7dited ^1B^7y ^1L^7umince");
 //	self thread NewsBarDestroy(self.Menu.NewsBar["Texte"]);
 //	self thread NewsBarDestroy2(self.Menu.NewsBar["Texte"]);
 //	for(;;)
@@ -3121,122 +3124,6 @@ ReviveAll()
 		}
 	}
 }
-aarr649()
-{
-	if(self.drunk==true)
-	{
-		self iPrintln("Drunk Mode [^2ON^7]");
-		self thread t649();
-		wait 10;
-		self thread l45();
-		self.drunk=false;
-	}
-	else
-	{
-		self notify("lil");
-		self setPlayerAngles(self.angles+(0,0,0));
-		self setBlur(0,1.0);
-		self iPrintln("Drunk Mode [^1OFF^7]");
-		self.drunk=true;
-	}
-}
-t649()
-{
-	weap=self GetCurrentWeapon();
-	self.give_perks_over=false;
-	self thread Give_Perks("649","zombie_perk_bottle_doubletap");
-	self waittill("ready");
-	self thread Give_Perks("649","zombie_perk_bottle_jugg");
-	self waittill("ready");
-	self thread Give_Perks("649","zombie_perk_bottle_revive");
-	self waittill("ready");
-	self thread Give_Perks("649","zombie_perk_bottle_sleight");
-	self waittill("ready");
-	self SwitchToWeapon(weap);
-}
-l45()
-{
-	self endon("lil");
-	while(1)
-	{
-		self setPlayerAngles(self.angles+(0,0,0));
-		self setstance("prone");
-		wait (0.1);
-		self SetBlur(10.3,1.0);
-		self setPlayerAngles(self.angles+(0,0,5));
-		self setstance("stand");
-		wait (0.1);
-		self SetBlur(9.1,1.0);
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,10));
-		wait (0.1);
-		self setstance("prone");
-		wait (0.1);
-		self SetBlur(6.2,1.0);
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,15));
-		self setBlur(5.2,1.0);
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,20));
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,25));
-		self setBlur(4.2,1.0);
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,30));
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,35));
-		self setBlur(3.2,1.0);
-		wait (0.1);
-		self setstance("crouch");
-		self setPlayerAngles(self.angles+(0,0,30));
-		wait (0.1);
-		self setstance("prone");
-		self setPlayerAngles(self.angles+(0,0,25));
-		self setBlur(2.2,1.0);
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,20));
-		wait (0.1);
-		self setstance("crouch");
-		self setPlayerAngles(self.angles+(0,0,15));
-		self setBlur(1.2,1.0);
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,10));
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,5));
-		self setBlur(0.5,1.0);
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,-5));
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,-10));
-		self setBlur(0,1.0);
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,-15));
-		wait (0.1);
-		self setstance("prone");
-		self setPlayerAngles(self.angles+(0,0,-20));
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,-25));
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,-30));
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,-35));
-		wait (0.1);
-		self setstance("stand");
-		self setPlayerAngles(self.angles+(0,0,-30));
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,-25));
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,-20));
-		wait (0.1);
-		self setstance("crouch");
-		self setPlayerAngles(self.angles+(0,0,-15));
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,-10));
-		wait (0.1);
-		self setPlayerAngles(self.angles+(0,0,-5));
-		wait .1;
-	}
-}
 Give_Perks(Perk,Perk_Bottle)
 {
 	playsoundatposition("bottle_dispense3d",self.origin);
@@ -4998,6 +4885,8 @@ dogiveperk(perk)
 }
 giveallperks()
 {
+	self iPrintln("All Perks ^1Given");
+	self iprintln( "^1Warning^7 : Wait Until You're Done Drinking" );
 	if(isdefined(level.zombiemode_using_juggernaut_perk) && level.zombiemode_using_juggernaut_perk)
 	{
 		self dogiveperk("specialty_armorvest");
@@ -5046,7 +4935,6 @@ giveallperks()
 	{
 		self dogiveperk("specialty_finalstand");
 	}
-	self iPrintln("All Perks ^1Given");
 }
 removeallperks()
 {
@@ -5787,4 +5675,140 @@ teleportPlayer(player, origin, angles)
 {
     player setOrigin(origin);
     player setPlayerAngles(angles);
+}
+//5.0.1 Additions
+togglevisions()
+{
+	if( self.moddedvision == 0 )
+	{
+		self.moddedvision = 1;
+		self useservervisionset( 1 );
+		self setvisionsetforplayer( "zombie_last_stand", 0 );
+		self iprintln( "Vision Changed To ^2Last Stand" );
+	}
+	else
+	{
+		if( self.moddedvision == 1 )
+		{
+			self.moddedvision = 2;
+			self useservervisionset( 1 );
+			self setvisionsetforplayer( "zombie_death", 0 );
+			self iprintln( "Vision Changed To ^2Death" );
+		}
+		else
+		{
+			if( self.moddedvision == 2 )
+			{
+				self.moddedvision = 3;
+				self useservervisionset( 1 );
+				self setvisionsetforplayer( "remote_mortar_enhanced", 0 );
+				self iprintln( "Vision Changed To ^2Enhanced" );
+			}
+			else
+			{
+				if( self.moddedvision == 3 )
+				{
+					self.moddedvision = 0;
+					self useservervisionset( 0 );
+					self iprintln( "Vision Changed To ^2Normal" );
+				}
+			}
+		}
+	}
+
+}
+
+setfov( fo )
+{
+	self setclientfov( fo );
+	self iprintln( "^5Field Of View : [^1" + ( fo + "^5]" ) );
+
+}
+
+teddymask()
+{
+	if( self.tedmask == 0 )
+	{
+		self.tedmask = 1;
+		self attach( "zombie_teddybear", "J_Head" );
+		self iprintln( "Teddy Mask : [^2On^7]" );
+	}
+	else
+	{
+		self.tedmask = 0;
+		self detach( "zombie_teddybear", "J_Head" );
+		self iprintln( "Teddy Mask : [^1Off^7]" );
+	}
+
+}
+
+togglephd()
+{
+	if( !(IsDefined( self.flopp )) )
+	{
+		self.flopp = 1;
+		self iprintln( "PHD Flopper ^2Enabled" );
+		self thread loopphd();
+	}
+	else
+	{
+		self.flopp = undefined;
+		self iprintln( "PHD Flopper ^1Disabled" );
+		self notify( "stop_phd" );
+	}
+
+}
+
+loopphd()
+{
+	self endon( "disconnect" );
+	self endon( "stop_phd" );
+	for(;;)
+	{
+	if( self.divetoprone && IsDefined( self.divetoprone ) )
+	{
+		if( self isonground() )
+		{
+			self explodephd();
+			wait 0.3;
+		}
+	}
+	wait 0.05;
+	}
+}
+
+explodephd()
+{
+	if( level.script == "zm_buried" || level.script == "zm_tomb" )
+	{
+		explosionfx = level._effect[ "divetonuke_groundhit"];
+	}
+	else
+	{
+		explosionfx = loadfx( "explosions/fx_default_explosion" );
+	}
+	self playsound( "zmb_phdflop_explo" );
+	playfx( explosionfx, self.origin );
+	self damagezombiesinrange( 310, self, "kill" );
+
+}
+
+damagezombiesinrange( range, what, amount )
+{
+	enemy = getaiarray( level.zombie_team );
+	foreach( zombie in enemy )
+	{
+		if( distance( zombie.origin, what.origin ) < range )
+		{
+			if( amount == "kill" )
+			{
+				zombie dodamage( zombie.health * 2, zombie.origin, self );
+			}
+			else
+			{
+				zombie dodamage( amount, zombie.origin, self );
+			}
+		}
+	}
+
 }

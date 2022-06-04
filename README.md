@@ -1,12 +1,21 @@
-# Gr3Zz v5.0
+# Gr3Zz v5.1
 
 This is a black ops II gsc script menu for Plutonium. This is an edited version of of Gr3Zz v4.1 that can be found [here.](https://www.se7ensins.com/forums/threads/release-gsc-black-ops-2-gr3zz-v4-1-zombie-patch-xbox-ps3-pc.1205963/
 )
 
-## Usage
+## Host Whitelist - For Custom Games/Dedicated Servers
+This allows you to setup a whitelist of usernames that will be considered as Host/Co-Host
+The first person that joins will be considered as Host, and the reset will be considered as Co-Host
 
 Find the function `onplayerspawned()` & look for `whitelist = array("USERNAME","USERNAME");`<br />
 Enter comma separated, double quoted usernames, then save and compile the gsc for Plutonium's use. Enjoy!
+
+## How to use
+
+Open Menu - Throw Secondary (Normally `4`)
+Close Menu - Melee Attack (Normally `V`)
+Select Option - Use Button (Usually `F`)
+Previous Menu - (Usually `C`)
 
 ## Credit
 
@@ -15,7 +24,24 @@ Enter comma separated, double quoted usernames, then save and compile the gsc fo
 - Ultimateman#9753 - Functions/Help
 - GerardS0406#5657 - Functions/Help
 
-## Changes from v4.1
+## Update 5.0.1
+**Added Functions:**
+*Main Mods
+- Visions Toggle
+
+*Fun Menu*
+- PHD Flopper Explosion Function 
+
+*Perks Menu*
+- Corrected Juggernog name in Perks Menu
+
+**Fixed/Changed Functions:**
+- Renamed Protection Skull to Death Skull
+
+**Removed Functions:**
+- Drunk Mode
+
+## Update 5.0
 
 **Fixed/Changed Functions:**
 
